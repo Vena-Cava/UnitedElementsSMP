@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<link href="Styles/light.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<title>United Elements SMP | Home</title>
+</head>
+
+<body>
+	<div id="Header" class="navigation">
+		<div id="logoDiv">
+			<img id="UESMP-Logo" src="images/UESMP-Logo-Black.png" alt="United Elements logo" height="100px">
+		</div>
+		<div id="navButtons">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="dynmap.html">Dynmap</a></li>
+			</ul>
+		</div>
+		<div id="theme-switch">
+			<!-- Theme switch -->
+			<label class="switch">
+  				<input type="checkbox" onclick="themeSwitch()">
+	  			<span class="slider round"></span>
+			</label>
+		</div>
+		
+		
+		
+	</div>
+	<div id="Main">
+		
+		
+		
+		
+		
+	</div>
+	
+	<script>
+		function themeSwitch() {
+			// Obtains an array of all <link>
+            // elements.
+            // Select your element using indexing.
+            var theme = document.getElementsByTagName('link')[0];
+  
+            // Change the value of href attribute 
+            // to change the css sheet.
+            if (theme.getAttribute('href') == 'Styles/light.css') {
+                theme.setAttribute('href', 'Styles/dark.css');
+            } else {
+                theme.setAttribute('href', 'Styles/light.css');
+            }
+			
+			var Image_Id = document.getElementById('UESMP-Logo');
+			if (Image_Id.src.match("images/UESMP-Logo-Black.png")) {
+				Image_Id.src = "images/UESMP-Logo-Color.png";
+			}
+			else {
+				Image_Id.src = "images/UESMP-Logo-Black.png";
+			}
+		}
+	</script>
+	
+</body>
+</html>
